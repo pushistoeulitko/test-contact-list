@@ -5,8 +5,8 @@ class TestLocators:
     LOCATOR_FIRST_NAME = (By.XPATH, "//*[@id='gwt-debug-contentPanel']//tr[2]/td[2]/input")
     LOCATOR_LAST_NAME = (By.XPATH, "//*[@id='gwt-debug-contentPanel']//tr[3]//input")
     LOCATOR_CATEGORY_1 = (By.XPATH, "//*[@id='gwt-debug-contentPanel']//tr[4]//select")
-    LOCATOR_CATEGORY_2 = (By.XPATH, f"//*[@id='gwt-debug-contentPanel']//tr[4]/td[2]/select/option[3]")
-    # LOCATOR_CATEGORY_OPT = (By.XPATH, f"//*[@id='gwt-debug-contentPanel']//tr[4]/td[2]/select/option[{option}]")
+    LOCATOR_CATEGORY_2 = (By.XPATH, "//*[@id='gwt-debug-contentPanel']//tr[4]/td[2]/select/option[3]")
+    LOCATOR_CATEGORY_OPT = "//*[@id='gwt-debug-contentPanel']//tr[4]/td[2]/select/option["
     LOCATOR_BIRTHDAY = (By.XPATH, "//*[@id='gwt-debug-contentPanel']//tr[5]//input")
     LOCATOR_DATE = (By.XPATH, "//tr[2]//tr[5]/td[4]/div")
     LOCATOR_ADRESS = (By.XPATH, "//*[@id='gwt-debug-contentPanel']//tr[6]//textarea")

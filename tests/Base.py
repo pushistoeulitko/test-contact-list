@@ -8,7 +8,7 @@ class BasePage:
         self.driver = driver
         self.base_url = "http://samples.gwtproject.org/samples/Showcase/Showcase.html#!CwCellList"
 
-    def find_element(self, locator, option=3, time=10):
+    def find_element(self, locator, time=10):
         return WebDriverWait(self.driver, time).until(EC.presence_of_element_located(locator),
                                                       message=f"Can't find element by locator {locator}")
 

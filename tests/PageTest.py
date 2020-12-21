@@ -1,3 +1,4 @@
+from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from tests.Base import BasePage
 from tests.Locators import TestLocators
@@ -17,10 +18,10 @@ class Method(BasePage):
         field.clear()
         field.send_keys(mesege)
 
-    def select_category(self, option):
+    def select_category(self, category):
         self.click_button(TestLocators.LOCATOR_CATEGORY_1)
-        #self.click_button(TestLocators.LOCATOR_CATEGORY_OPT, option)
-        self.click_button(TestLocators.LOCATOR_CATEGORY_2, option)
+        path = (By.XPATH, TestLocators.LOCATOR_CATEGORY_OPT + f"{category}]")
+        self.click_button(path)
 
     def date_picker(self, date):
         self.click_button(TestLocators.LOCATOR_BIRTHDAY)

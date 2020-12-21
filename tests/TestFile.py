@@ -38,11 +38,9 @@ def test_one_field_last_name(browser, address):
 
 @pytest.mark.parametrize("category", ['1', '2', '3', '4', '5'])
 def test_one_field_select_category(browser, category):
-    pytest.skip()
     page = Method(browser)
-    #LOCATOR_CATEGORY_OPT
     page.fill_contact(fn, ln, ad)
-    page.select_category()
+    page.select_category(category)
     page.click_button(TestLocators.LOCATOR_SUBMIT)
     page.check_number_contact(251)
 
